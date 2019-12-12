@@ -6,8 +6,12 @@ scalaVersion := "2.13.1"
 
 
 libraryDependencies ++= Seq(
-  "org.scalacheck" %% "scalacheck" % "1.14.2" % Test withSources(),
-  "com.storm-enroute" %% "scalameter" % "0.19" % Test withSources(),
   "org.apache.cayenne" % "cayenne-server" % "4.1.RC2" withSources(),
-  "com.github.jasync-sql" % "jasync-mysql" % "1.0.12" withSources()
+  "com.github.jasync-sql" % "jasync-mysql" % "1.0.12" withSources(),
+  "mysql" % "mysql-connector-java" % "8.0.18" withSources(),
+  "com.storm-enroute" %% "scalameter" % "0.19" % Test withSources(),
+  "org.scalacheck" %% "scalacheck" % "1.14.2" % Test withSources(),
+  "com.lihaoyi" %% "utest" % "0.7.1" % Test withSources()
 )
+
+testFrameworks += new TestFramework("utest.runner.Framework")
