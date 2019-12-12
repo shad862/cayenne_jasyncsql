@@ -11,7 +11,8 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "8.0.18" withSources(),
   "com.storm-enroute" %% "scalameter" % "0.19" % Test withSources(),
   "org.scalacheck" %% "scalacheck" % "1.14.2" % Test withSources(),
-  "com.lihaoyi" %% "utest" % "0.7.1" % Test withSources()
+  "com.lihaoyi" %% "utest" % "0.7.1" % Test withSources(),
+  "org.slf4j" % "slf4j-log4j12" % "1.7.29" % Test
 )
 
 testFrameworks += new TestFramework("utest.runner.Framework")
